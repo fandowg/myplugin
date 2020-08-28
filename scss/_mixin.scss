@@ -1,0 +1,22 @@
+$color:#0052ec;
+
+@mixin backface-visibility($visibility:hidden) { //Add an argument
+  backface-visibility: $visibility;
+  -webkit-backface-visibility: $visibility;
+  -moz-backface-visibility: $visibility;
+  -ms-backface-visibility: $visibility;
+  -o-backface-visibility: $visibility;
+}
+
+h4{
+  margin-top: 30px;
+}
+
+h1 {
+    @include backface-visibility();
+    color:$color;
+    @extend h4;
+}
+$len1:15px;
+$len2:12px;
+$len3:8px;

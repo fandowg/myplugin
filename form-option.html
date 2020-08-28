@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <h2>操縱拉桿</h2>
+    <input type="range" min="0" max="100" step="1">
+    <span class="rangeValue"></span>
+    <script>
+        var range = document.querySelector("input[type='range']");
+    function changeProgress(){
+        range.style.backgroundSize = range.value + '% 100%';
+        //console.log(range.value);
+        document.querySelector(".rangeValue").innerText=range.value;
+    }
+    changeProgress();
+    range.addEventListener('mousemove', changeProgress);
+    range.addEventListener('input', changeProgress);
+    range.addEventListener('touchend',changeProgress);
+    range.addEventListener('touchmove', changeProgress);
+    </script>
+    <h2>開關</h2>
+    <label class="switch">
+        <input type="checkbox" checked>
+        <div class="slider"></div>
+    </label>
+    <span class="switchValue">開</span>
+    <script>
+        var switchBtn =document.querySelector(".switch input[type='checkbox']")
+switchBtn.addEventListener('change',function(){
+    if(switchBtn.checked){
+document.querySelector('.switchValue').innerText='開'
+    }else {
+        document.querySelector('.switchValue').innerText='關'
+    }
+    //console.log(document.querySelector(".switch input[type='checkbox']").checked);
+});
+</script>
+    <h2>checkbox</h2>
+    <div class="input-row checkbox-type">
+        <input  type="checkbox" id="checkbox-1" name="">
+        <label  for='checkbox-1'><i></i> 我同意隱私權條款</label>
+    </div>
+
+    <h2>checkbox 多選</h2>
+    <div class="input-row checkbox-type">
+        <ul>
+            <li>
+        <input  type="checkbox" id="checkbox-2" name="">
+        <label  for='checkbox-2'><i></i> 台北市</label>
+    </li>
+    <li>
+        <input  type="checkbox" id="checkbox-3" name="">
+        <label  for='checkbox-3'><i></i> 台中市</label>
+    </li>
+</ul>
+    </div>
+
+    <h2>checkbox 預設</h2>
+    <div class="input-row checkbox-default">
+        <ul>
+            <li>
+                <input type="checkbox" id="checkbox-n1" name=""><label for="checkbox-n1">選項1</label>
+            </li>
+            <li>
+                <input type="checkbox" id="checkbox-n2" name=""><label for="checkbox-n2">選項1</label>
+            </li>
+            <li>
+                <input type="checkbox" id="checkbox-n3" name=""><label for="checkbox-n3">選項1</label>
+            </li>
+        </ul>
+
+    </div>
+
+    <h2>radio</h2>
+
+<div class="input-row radio-type">
+        <ul>
+            <li>
+        <input  type="radio" id="radio-1" name="radio">
+        <label  for='radio-1'><i></i> 台北市</label>
+    </li>
+    <li>
+        <input  type="radio" id="radio-2" name="radio">
+        <label  for='radio-2'><i></i> 台中市</label>
+    </li>
+</ul>
+    </div>
+
+    <h2>radio 預設</h2>
+ <div class="input-row radio-default">
+    <ul>
+            <li>
+                <input type="radio" id="radio-n1" name="radio-n"><label for="radio-n1">選項1</label>
+            </li>
+            <li>
+                <input type="radio" id="radio-n2" name="radio-n"><label for="radio-n2">選項1</label>
+            </li>
+            <li>
+                <input type="radio" id="radio-n3" name="radio-n"><label for="radio-n3">選項1</label>
+            </li>
+        </ul>
+
+</div>
+
+
+    <h2>select</h2>
+<div class="input-row ">
+<select class="select-default" name=""  >
+    <option value="option0">請選擇</option>
+    <option value="option1">option1</option>
+    <option value="option2">option2</option>
+    <option value="option3">option3</option>
+    <option value="option4">option4</option>
+</select>
+</div>
+<div class="input-row ">
+<select class="select-default" name="" size="2" >
+    <option value="option0">請選擇</option>
+    <option value="option1">option1</option>
+    <option value="option2">option2</option>
+    <option value="option3">option3</option>
+    <option value="option4">option4</option>
+</select>
+</div>
+<div class="input-row ">
+    <label class="select-type">
+<select name="" >
+    <option value="option0">請選擇</option>
+    <option value="option1">option1</option>
+    <option value="option2">option2</option>
+    <option value="option3">option3</option>
+    <option value="option4">option4</option>
+</select>
+<i></i>
+</label>
+</div>
+    <h2>input</h2>
+<div class="input-row ">
+    <input type="text" placeholder="請輸入文字" name="">
+</div>
+
+    <h2>文字框</h2>
+    <div class="input-row ">
+    <textarea>
+
+    </textarea>
+</div>
+
+        <h2>搜尋</h2>
+</body>
+
+</html>
